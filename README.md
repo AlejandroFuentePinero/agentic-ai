@@ -1,126 +1,150 @@
-# Agentic AI — Foundations from Scratch
+# === PROJECT ON HOLD ===
 
-The goal is to build a solid, intuitive understanding of how agents work — starting from the simplest possible examples and gradually progressing toward more advanced, multi-agent systems.
+# Agentic AI Project
 
-This repository supports two parallel goals:
-1. **Learning the fundamentals of agent design** through clean, minimal Python examples.
-2. **Building a portfolio-ready foundation** that will feed into more advanced Agentic AI projects.
+## Overview
+This repository contains the foundational project for learning and building Agentic AI systems from scratch. The goal is to transition from no practical agentic experience to being able to design, implement, evaluate, and scale real-world multi-agent AI workflows.
 
----
-
-## Project Structure
-
-```
-01_agentic_basics/
-├── notebooks/
-│   └── 00_agentic_ai_from_scratch.ipynb    # Core learning notebook
-├── src/
-│   ├── agents/
-│   │   └── basic_agent.py                  # Minimal first agent
-│   └── __init__.py
-├── data/
-│   ├── raw/
-│   └── processed/
-├── tests/
-├── README.md
-└── .gitignore
-```
+This project is intentionally structured in progressive stages, starting with basic Python-only agent architectures and scaling into fully autonomous, reflective, multi-agent systems powered by LLMs.
 
 ---
 
-## Learning Objectives
+## Project Roadmap
 
-### Phase 1 — Foundations (Pure Python)
-- Understand what an "agent" is (tasks, memory, actions, tools).
-- Build a minimal agent from scratch without any external frameworks.
-- Learn how reasoning, tool use, and planning fit together.
-- Create reusable components for future agent systems.
+### **Stage 1 — Agent Foundations (Python Only)**
+Learn fundamental agent architecture **without LLMs**, to build deep intuition.
 
-### Phase 2 — Mini-Projects
-- Retrieval agent (queries structured data).
-- Planning + worker agent pair.
-- Analyst agent for simple ML workflows.
-- Optional: Researcher + Writer system.
+Modules included:
+1. What is an Agent? Core definitions  
+2. Basic agent loop (perception → reasoning → action → memory)  
+3. Tools & actions  
+4. State handling  
+5. Memory structures  
+6. Error handling, retry logic  
+7. Multi-step task execution  
 
-### Phase 3 — Portfolio Multi-Agent System
-A full multi-agent application built with a modern framework (e.g., LangGraph).  
-This project will evolve into a professional, public-facing AI system in a later repository.
-
----
-
-## Why This Project Exists
-
-Most Agentic AI courses start at an advanced level, assuming familiarity with:
-- Agent workflows  
-- Tool-calling patterns  
-- Hierarchical routing  
-- Memory/state handling  
-- Framework-specific abstractions  
-
-This project fills the missing **beginner-to-intermediate bridge**, building intuition and confidence before jumping into frameworks.
+Output:  
+A Python notebook implementing a working agent loop from scratch.
 
 ---
 
-## Getting Started
+### **Stage 2 — Single-LLM Agent**
+Introduce your first real LLM-powered agent.
 
-Clone the repository, create a virtual environment, and install dependencies:
+You will learn:
+- How to call an LLM inside an agent loop  
+- How to structure prompts  
+- How to inject state, goals, and constraints  
+- Logging, evaluation, and deterministic behaviour  
+- Tool-use basics (search, calculator, APIs)
+
+Output:  
+A functional LLM agent that can complete constrained tasks.
+
+---
+
+### **Stage 3 — Multi-Agent Systems**
+Build your first cooperative multi-agent workflow.
+
+Includes:
+- Task decomposition agent  
+- Worker/executor agents  
+- Planner → executor → verifier loops  
+- Message passing between agents  
+- Stopping conditions and error recovery  
+
+Output:  
+A small multi-agent system completing a real task end-to-end.
+
+---
+
+### **Stage 4 — Reflection & Improvement Loops**
+Introduce autonomous self-evaluation.
+
+You will learn:
+- Reflection prompts  
+- Critic + reviser patterns  
+- Quality scoring  
+- Reasoning consistency checks  
+- Iterative refinement loops  
+
+Output:  
+A self-improving agent capable of reflection-driven rewrites.
+
+---
+
+### **Stage 5 — Tools, APIs, Retrieval, and Integration**
+Agents become useful when connected to external capabilities.
+
+This stage covers:
+- Search agents  
+- Retrieval-augmented agents  
+- Web scraping agents  
+- File-writing agents  
+- Long-term memory (vector stores)  
+- Planning with external data
+
+Output:  
+An agentic application using multiple tools (RAG, search, file I/O).
+
+---
+
+### **Stage 6 — Capstone Portfolio Agent**
+You will build a **full agentic application** suitable for portfolio use.
+
+Possible project directions:
+- Automated research assistant  
+- Multi-agent document analyst  
+- Dataset-cleaning agent  
+- Automated API-monitoring/reporting agent  
+- A reflective agent for your Flagship Projects  
+
+Output:  
+A polished, documented, portfolio-ready agentic AI system.
+
+---
+
+## Environment Setup
+
+To create and activate the environment:
 
 ```bash
-git clone <repo-url>
-cd agentic-basics
-
-# (Optional) Create a virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
-
+python3 -m venv agentic_env
+source agentic_env/bin/activate
 pip install -r requirements.txt
 ```
 
-> *The project starts framework-free. Requirements will grow later as complexity increases.*
-
-Open the main notebook:
+Register the Jupyter kernel:
 
 ```bash
-jupyter lab notebooks/00_agentic_ai_from_scratch.ipynb
+python -m ipykernel install --user --name agentic_ai --display-name "Python (agentic_ai)"
 ```
 
 ---
 
-## Next Steps
+## Repository Structure
 
-The first implementation will be a **simple Python agent** that:
-
-- Accepts a task  
-- Reasonably decides what to do  
-- Uses a simple “tool” (a Python function)  
-- Returns structured output  
-
-No frameworks.  
-No complexity.  
-Just the core logic of how an agent *thinks* and *acts*.
+```
+01_agentic_ai/
+│
+├── data/
+├── docs/
+├── notebooks/
+├── src/
+├── tests/
+├── requirements.txt
+└── README.md
+```
 
 ---
 
 ## Status
-
-**Current phase:** Building the foundation (Phase 1)  
-This will expand as I learn more about Agentic systems and build confidence in designing and implementing them.
-
----
-
-## Future Expansion
-
-Future versions of this project will include:
-- LangChain / LangGraph agent flows  
-- Tool-calling agents  
-- Multi-agent collaboration  
-- Planner → worker → evaluator systems  
-- Domain-specific agents (DS, climate, job intelligence, research)
-
-These will become separate repositories once the foundations are strong.
+✔ Environment ready  
+✔ GitHub connected  
+✔ Project roadmap established  
+⏳ Starting Stage 1 (Agent Foundations)
 
 ---
 
 ## License
-
-MIT License (optional — will add later if needed)
+MIT License

@@ -1,4 +1,7 @@
-# === PROJECT ON HOLD ===
+# ===
+# PAUSED PROJECT
+# ===
+
 
 # Agentic AI Project
 
